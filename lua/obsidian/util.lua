@@ -985,9 +985,9 @@ util.get_visual_selection = function(opts)
   end
 
   -- Check if last byte is part of a multibyte character & adjust end index if so
-  local is_multibyte_char = util.isMultibyteChar({ buffer = 0, row = cerow - 1, start_col = cecol })
+  local is_multibyte_char = util.isMultibyteChar { buffer = 0, row = cerow - 1, start_col = cecol }
   if is_multibyte_char then
-    cecol = is_multibyte_char['finish']
+    cecol = is_multibyte_char["finish"]
   end
 
   ---@type string
